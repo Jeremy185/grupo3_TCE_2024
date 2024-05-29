@@ -1,0 +1,9 @@
+Resultados de la decodificación Hamming (7,4):
+Errores corregidos: 90
+BER: 0.271654
+Tiempo de ejecución: 0.000741 segundos
+
+Resultados de la decodificación Hamming (15,11):
+Errores corregidos: 94
+BER: 0.203412
+Tiempo de ejecución: 0.000907 segundos
