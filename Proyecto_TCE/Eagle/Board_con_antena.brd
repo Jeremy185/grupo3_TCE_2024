@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.7.0">
+<eagle version="9.6.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
+<setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="0.003125" unitdist="mic" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.05" altunitdist="mm" altunit="mm"/>
@@ -20,7 +21,7 @@
 <layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="25" name="tNames" color="7" fill="1" visible="no" active="yes"/>
 <layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="yes" active="yes"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
@@ -152,9 +153,9 @@ Product Page &lt;a href="http://infocenter.nordicsemi.com/index.jsp?topic=%2Fcom
 &lt;b&gt;Description:&lt;/b&gt;&lt;br&gt;
 Bluetooth Low Energy board</description>
 <plain>
-<wire x1="0" y1="0" x2="55.66" y2="0" width="0" layer="20"/>
-<wire x1="55.66" y1="0" x2="55.66" y2="22.86" width="0" layer="20"/>
-<wire x1="55.66" y1="22.86" x2="0" y2="22.86" width="0" layer="20"/>
+<wire x1="0" y1="0" x2="59.36" y2="0" width="0" layer="20"/>
+<wire x1="59.36" y1="0" x2="59.36" y2="22.86" width="0" layer="20"/>
+<wire x1="59.36" y1="22.86" x2="0" y2="22.86" width="0" layer="20"/>
 <wire x1="0" y1="22.86" x2="0" y2="0" width="0" layer="20"/>
 <rectangle x1="50.94" y1="0" x2="55.74" y2="22.9" layer="41"/>
 <rectangle x1="40.74" y1="9.6" x2="44.34" y2="13.4" layer="41"/>
@@ -257,6 +258,12 @@ Bluetooth Low Energy board</description>
 <text x="19.05" y="20.32" size="1" layer="21" font="vector" ratio="15" rot="R270" align="center-left">5</text>
 <text x="16.51" y="20.32" size="1" layer="21" font="vector" ratio="15" rot="R270" align="center-left">4</text>
 <rectangle x1="49.4" y1="9.3" x2="50.9" y2="11.7" layer="41"/>
+<dimension x1="52.05199375" y1="10.7311625" x2="50.85199375" y2="10.86945625" x3="51.45199375" y3="-9.12175" textsize="1" layer="1" dtype="horizontal" visible="yes"/>
+<dimension x1="58.45199375" y1="15.845425" x2="58.193409375" y2="5.845425" x3="62.013809375" y3="10.845425" textsize="1" layer="1" dtype="vertical" visible="yes"/>
+<dimension x1="52.85199375" y1="9.562575" x2="54.05199375" y2="9.7470625" x3="53.45199375" y3="20.987796875" textsize="1" layer="1" dtype="horizontal" visible="yes"/>
+<dimension x1="54.45199375" y1="6.245425" x2="56.1032875" y2="6.94006875" x3="55.277640625" y3="-1.982878125" textsize="1" layer="1" dtype="horizontal" visible="yes"/>
+<dimension x1="56.25199375" y1="6.03978125" x2="58.85199375" y2="6.3468875" x3="57.55199375" y3="2.6104125" textsize="1" layer="1" dtype="horizontal" visible="yes"/>
+<dimension x1="56.85199375" y1="11.518540625" x2="58.05199375" y2="11.518540625" x3="57.45199375" y3="17.765134375" textsize="1" layer="1" dtype="horizontal" visible="yes"/>
 </plain>
 <libraries>
 <library name="Nordic_nRF">
@@ -775,10 +782,14 @@ design rules under a new name.</description>
 <param name="slThermalsForVias" value="0"/>
 <param name="dpMaxLengthDifference" value="10mm"/>
 <param name="dpGapFactor" value="2.5"/>
-<param name="checkGrid" value="0"/>
 <param name="checkAngle" value="0"/>
 <param name="checkFont" value="1"/>
 <param name="checkRestrict" value="1"/>
+<param name="checkStop" value="0"/>
+<param name="checkValues" value="0"/>
+<param name="checkNames" value="1"/>
+<param name="checkWireStubs" value="1"/>
+<param name="checkPolygonWidth" value="0"/>
 <param name="useDiameter" value="13"/>
 <param name="maxErrors" value="50"/>
 </designrules>
@@ -1793,6 +1804,16 @@ design rules under a new name.</description>
 <contactref element="J8" pad="OUT"/>
 <wire x1="49.2" y1="10.85" x2="50.34" y2="10.85" width="0.2" layer="1"/>
 <wire x1="50.34" y1="10.85" x2="50.34" y2="10.8" width="0.2" layer="1"/>
+<wire x1="49.235590625" y1="10.848978125" x2="52.45199375" y2="10.848978125" width="0.8" layer="1"/>
+<wire x1="52.45199375" y1="10.848978125" x2="52.45199375" y2="10.845425" width="0.1524" layer="1"/>
+<wire x1="52.45199375" y1="10.845425" x2="52.45199375" y2="6.245425" width="0.8" layer="1"/>
+<wire x1="52.45199375" y1="6.245425" x2="54.45199375" y2="6.245425" width="0.8" layer="1"/>
+<wire x1="54.45199375" y1="6.245425" x2="54.45199375" y2="15.617390625" width="0.8" layer="1"/>
+<wire x1="54.45199375" y1="15.617390625" x2="56.45199375" y2="15.617390625" width="0.8" layer="1"/>
+<wire x1="56.45199375" y1="15.617390625" x2="56.45199375" y2="6.245425" width="0.8" layer="1"/>
+<wire x1="56.45199375" y1="6.245425" x2="58.45199375" y2="6.245425" width="0.8" layer="1"/>
+<wire x1="58.45199375" y1="6.245425" x2="58.45199375" y2="15.445425" width="0.8" layer="1"/>
+<wire x1="49.235590625" y1="10.848978125" x2="49.2" y2="10.85" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$2">
 <contactref element="L2" pad="2"/>
@@ -2145,87 +2166,26 @@ design rules under a new name.</description>
 <wire x1="8.9" y1="17.3" x2="8.9" y2="19.855" width="0.4" layer="1"/>
 <wire x1="8.9" y1="19.855" x2="8.89" y2="19.865" width="0.4" layer="1"/>
 </signal>
-<signal name="S$1">
-<wire x1="50.343190625" y1="10.808971875" x2="54.743190625" y2="10.808971875" width="0.6" layer="1"/>
-<wire x1="54.743190625" y1="10.808971875" x2="54.743190625" y2="22.008971875" width="0.6" layer="1"/>
-<wire x1="50.920709375" y1="7.224103125" x2="54.7953875" y2="7.20598125" width="0.6" layer="1"/>
-</signal>
-<signal name="S$2">
-<wire x1="54.805959375" y1="7.17988125" x2="54.753765625" y2="12.323278125" width="0.6" layer="1"/>
-</signal>
 </signals>
+<mfgpreviewcolors>
+<mfgpreviewcolor name="soldermaskcolor" color="0xC8008000"/>
+<mfgpreviewcolor name="silkscreencolor" color="0xFFFEFEFE"/>
+<mfgpreviewcolor name="backgroundcolor" color="0xFF282828"/>
+<mfgpreviewcolor name="coppercolor" color="0xFFFFBF00"/>
+<mfgpreviewcolor name="substratecolor" color="0xFF786E46"/>
+</mfgpreviewcolors>
 <errors>
-<approved hash="5,1,880e6fa30cb9887d"/>
-<approved hash="19,16,9cd43cb4308890e8"/>
-<approved hash="19,16,c5d915b91159c139"/>
-<approved hash="6,1,d3740deccdd25cd8"/>
-<approved hash="6,1,9ee8d2911188a196"/>
-<approved hash="6,1,fa70b28d38748dee"/>
-<approved hash="6,1,91d4d3e11168afa2"/>
-<approved hash="6,1,8c1cc2ff241697ba"/>
-<approved hash="6,1,8008bc1f5a86e5b6"/>
-<approved hash="6,1,c578813ee4075c66"/>
-<approved hash="6,1,83c0c20f2496987e"/>
-<approved hash="6,1,f5acb21d3834824a"/>
-<approved hash="6,1,cb44816ee4275212"/>
-<approved hash="6,1,93971422af50d7f1"/>
 <approved hash="6,1,d2eeeca5d374d41d"/>
 <approved hash="6,1,371f3881d36baad3"/>
-<approved hash="6,1,c300c32eb0cab0fc"/>
-<approved hash="6,1,570c572cc8c8d8f0"/>
-<approved hash="6,1,be3e41cc418cbe78"/>
 <approved hash="6,1,cd53d43d2ad16ce8"/>
-<approved hash="6,1,17e55427eb16e811"/>
 <approved hash="6,1,66ed67efdb2b9956"/>
-<approved hash="6,1,b3580fa2069cbd18"/>
-<approved hash="6,1,ecd99975038939d9"/>
-<approved hash="6,1,f98bbfad1d486a7f"/>
 <approved hash="6,1,f3be459d8c191dc1"/>
-<approved hash="6,1,87dda2774c6c4e3d"/>
-<approved hash="6,1,cb87d5a40958006b"/>
-<approved hash="6,1,c71c76e467a7c463"/>
-<approved hash="6,1,e23d19c71e86e372"/>
 <approved hash="6,1,dd34ced515209468"/>
-<approved hash="6,1,948015e0ce04dc75"/>
-<approved hash="6,1,b60f818bca035aab"/>
-<approved hash="6,1,66392c70c329f6e0"/>
 <approved hash="6,1,f0d256f7eb1332c9"/>
-<approved hash="6,1,fcec01100137fccb"/>
 <approved hash="6,1,951ef82cf8339501"/>
 <approved hash="6,1,98bff34df35298a0"/>
-<approved hash="6,1,f5a13741336ff18f"/>
-<approved hash="6,1,3e9f826382a33e5f"/>
 <approved hash="6,1,f822d3d0d3d5f827"/>
-<approved hash="6,1,25fbf2ea1542de15"/>
-<approved hash="6,1,0d2b4494177ea30b"/>
 <approved hash="6,1,1a42d30612f82676"/>
-<approved hash="6,1,2cb06515f97f4d10"/>
-<approved hash="6,1,480501b2dcff6a7e"/>
-<approved hash="6,1,480501b2ecff5a7e"/>
-<approved hash="6,1,97d215ac15e2979c"/>
-<approved hash="6,1,94e2169c1702957c"/>
-<approved hash="6,1,bc4ac234c2e1bc9f"/>
-<approved hash="6,1,bff2c18cc161bf1f"/>
-<approved hash="6,1,bd72c30cc321bd5f"/>
-<approved hash="6,1,bc6ac214cc21b25f"/>
-<approved hash="6,1,bf62c11cc161bf1f"/>
-<approved hash="6,1,57cd15b315775709"/>
-<approved hash="6,1,54ed169319575b29"/>
-<approved hash="6,1,55ed179317d755a9"/>
-<approved hash="19,16,5879660d89320788"/>
-<approved hash="19,16,448b5699da371637"/>
-<approved hash="19,16,2c3afc554503258d"/>
-<approved hash="19,16,a68e427924ab9c85"/>
-<approved hash="19,16,498dcd3b3af6cd99"/>
-<approved hash="19,16,b256e236e17ab11a"/>
-<approved hash="19,16,b656e636e19ab1fa"/>
-<approved hash="19,16,d0d8f0b8fca4dcc4"/>
-<approved hash="19,16,eab80ad8369fd6ff"/>
-<approved hash="19,16,0cd66cb6609600f6"/>
-<approved hash="19,16,1052703277aa17ca"/>
-<approved hash="19,16,0ec71ea722a632c6"/>
-<approved hash="19,16,d3c733a7362bd64b"/>
-<approved hash="5,16,e54ea1b897a0fd54"/>
 </errors>
 </board>
 </drawing>
